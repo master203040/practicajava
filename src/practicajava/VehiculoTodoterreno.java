@@ -1,22 +1,24 @@
-
+//hijo
 package practicajava;
 
+import java.util.logging.Logger;
 
-public class VehiculoTodoterreno extends Vehiculo{
+   
+public class VehiculoTodoterreno extends VehiculoTurismo{
 
-    public VehiculoTodoterreno() {
+    public VehiculoTodoterreno(String color, int kilomatraje, String modelo, String marca, String Npuertas, String Nllantas, String credito) {
+        super(color, kilomatraje, modelo, marca, Npuertas, Nllantas, credito);
     }
 
-    public VehiculoTodoterreno(String color, int kilomatraje, String modelo, String marca, String Npuertas, String Nllantas) {
-        super(color, kilomatraje, modelo, marca, Npuertas, Nllantas);
+    public String getCredito() {
+        return credito;
     }
-
+    
     @Override
     public String getColor() {
         return color;
     }
 
-   
     @Override
     public int getKilomatraje() {
         return kilomatraje;
@@ -41,11 +43,13 @@ public class VehiculoTodoterreno extends Vehiculo{
     public String getNllantas() {
         return Nllantas;
     }
-
     
     public String mostrarDato(){
     
-        return "\ncolor:" + color + "\nKilometraje:" + kilomatraje + "\nmodelo:" + modelo + "\nmarca:" +marca+ "\nNpuertas:" +Npuertas+ "\nNllantas:" +Nllantas;
+        return "\ncolor:" + color + "\nKilometraje:" + kilomatraje + "\nmodelo:" + modelo + "\nmarca:" +marca+ 
+                "\nNpuertas:" +Npuertas+ "\nNllantas:" +Nllantas+ "\ncredito :" + credito;
     }
+
+    
     
 }

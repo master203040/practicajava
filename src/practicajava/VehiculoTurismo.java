@@ -4,17 +4,11 @@ package practicajava;
 
 public class VehiculoTurismo extends Vehiculo{
     
-    private String credito ;
+    protected String credito;
 
-    public VehiculoTurismo(String credito) {
-        this.credito = credito;
-    }
-
-    public VehiculoTurismo() {
-    }
-
-    public VehiculoTurismo(String color, int kilomatraje, String modelo, String marca, String Npuertas, String Nllantas) {
+    public VehiculoTurismo(String color, int kilomatraje, String modelo, String marca, String Npuertas, String Nllantas,String credito) {
         super(color, kilomatraje, modelo, marca, Npuertas, Nllantas);
+        this.credito = credito;
     }
 
     public String getCredito() {
@@ -51,9 +45,11 @@ public class VehiculoTurismo extends Vehiculo{
         return Nllantas;
     }
     
+    
+    
     @Override
     public String mostrarDato(){
-    
+       
         return "\ncolor:" + color + "\nKilometraje:" + kilomatraje+ "\nmodelo:" +modelo+ "\nmarca:" + marca + "\nNpuertas:" + Npuertas + "\nNllantas:" + Nllantas + "\ncredito:" + credito;
     }
     
